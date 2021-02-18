@@ -6,6 +6,21 @@
     <head>
         <title></title>
         <script>   
+        	function Difference() {  
+              var dateI1 = document.getElementById("datep1").value;  
+              var dateI2 = document.getElementById("datep2").value;  
+       
+              var date1 = new Date(dateI1);  
+              var date2 = new Date(dateI2);  
+        
+              var time_difference = date2.getTime() - date1.getTime();  
+       
+              var result = time_difference / (1000 * 60 * 60 * 24);  
+       
+              return document.getElementById("result").innerHTML =    
+                   result + " days between both dates. ";  
+            }
+
             function daypick() {
 		        var today = new Date();
 		        var dd = today.getDate();
@@ -27,9 +42,16 @@
             <b>Masukkan Tanggal 1</b>   
             <input type="date" id="datep1">   
             <br> <br>    
+
+            <b>Masukkan Tanggal 2</b>   
+            <input type="date" id="datep2">   
+            <br> <br> 
  
         
-            <button onclick="daypick()">Submit</button>   
+            <button onclick="daypick()">Submit 1</button>   
+
+            <button onclick="Difference()">Submit 2</button>   
+        </p> 
         </p>   
         
         <h3 style="color:32A80F" id="result"></h3>   
