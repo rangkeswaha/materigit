@@ -1,2 +1,38 @@
 <h1>C14180243</h1>
 <h1>Kriyan Rangke Swaha</h1>
+
+
+<html>
+    <head>
+        <title></title>
+        <script>   
+            function daypick() {
+		        var today = new Date();
+		        var dd = today.getDate();
+		        var mm = today.getMonth()+1; 
+		        var yyyy = today.getFullYear();
+		        var date1 = document.getElementById("datep1").value;
+
+		        var myDate1 = new Date(date1);
+
+		        var timeDiff = today.getTime() - myDate1.getTime();
+
+		        var result = timeDiff / (24 * 3600 * 1000);
+		        return document.getElementById("result").innerHTML = result + " days between date 1 and today. ";
+		    }
+           </script>    
+    </head>
+    <body>
+        <p> 
+            <b>Masukkan Tanggal 1</b>   
+            <input type="date" id="datep1">   
+            <br> <br>    
+ 
+        
+            <button onclick="daypick()">Submit</button>   
+        </p>   
+        
+        <h3 style="color:32A80F" id="result"></h3>   
+        
+    </body>
+</html>
